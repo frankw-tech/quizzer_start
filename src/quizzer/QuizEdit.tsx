@@ -20,7 +20,7 @@ export const QuizEdit = ({
     const editQuestion = (questionId: number, newQuestion: Question) => {
         setNewQuiz({
             ...newQuiz,
-            questionList: newQuiz.questionList.map((question: Question): Question => 
+            questionList: newQuiz.questionList.map((question: Question): Question => id: questionId, Question: newQuestion
             )
         });
     };
