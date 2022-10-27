@@ -1,8 +1,13 @@
 import React, { useState } from "react";
 import { Question, QuestionType } from "../interfaces/question";
+// define Form and Button
+import { Form, Button } from "react-bootstrap";
 
 import "./QuestionEdit.css";
 
+
+// Property 'index' does not exist on type '{}'.
+// line 18: index: number, lastIndex: number, question: Question, editQuestion: Function, removeQuestion: Function, swapQuestion: Function
 export const QuestionEdit = ({
     index,
     lastIndex,
@@ -10,7 +15,7 @@ export const QuestionEdit = ({
     editQuestion,
     removeQuestion,
     swapQuestion
-}: {}) => {
+}: {index: number, lastIndex: number, question: Question, editQuestion: Function, removeQuestion: Function, swapQuestion: Function}) => {
     const [a, b] = useState<number>(
         question.options.findIndex((s: string) => question.expected === s)
     );
@@ -64,6 +69,7 @@ export const QuestionEdit = ({
         });
     };
 
+// line 120: change handleSwitch to switchMulti
     return (
         <>
             <hr />
@@ -111,7 +117,7 @@ export const QuestionEdit = ({
                                 <Form.Select
                                     className="type_dropdown"
                                     value={question.type}
-                                    onChange={handleSwitch}
+                                    onChange={switchMulti}
                                 >
                                     <option
                                         data-testid={

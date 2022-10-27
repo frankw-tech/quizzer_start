@@ -5,6 +5,7 @@ import { Form, Button } from "react-bootstrap";
 import "./QuizQuestion.css";
 type ChangeEvent = React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>;
 
+// index: number, question: Question, submitted: boolean, handleSubmit: Function, addPoints: Function, editQuestionSub: Function
 export const QuizQuestion = ({
     index,
     question,
@@ -12,7 +13,7 @@ export const QuizQuestion = ({
     handleSubmit,
     addPoints,
     editQuestionSub
-}: {}) => {
+}: {index: number, question: Question, submitted: boolean, handleSubmit: Function, addPoints: Function, editQuestionSub: Function}) => {
     const handleClick = (e: ChangeEvent) => {
         if (!submitted) {
             editQuestionSub(question.id, e.target.value);
@@ -26,6 +27,7 @@ export const QuizQuestion = ({
         }
     };
 
+    // line 58: type="radio"
     return (
         <>
             <hr />
@@ -53,7 +55,7 @@ export const QuizQuestion = ({
                             {question.options.map(
                                 (option: string, i: number) => (
                                     <Form.Check
-                                        type=""
+                                        type="radio"
                                         name={"questionChoice" + index}
                                         key={option + " | " + i}
                                         label={option}
