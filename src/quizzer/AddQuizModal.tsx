@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 
-// Property 'show' does not exist on type '{}'.
+// line 7: Property 'show' does not exist on type '{}'.
+// line 10: {show: Function, handleClose: Function, addQuiz: Function}
 export const AddQuizModal = ({
     show,
     handleClose,
     addQuiz
-}: {
+}: {show: Function, handleClose: Function, addQuiz: Function
 }) => {
     const [title, setTitle] = useState<string>("Example Quiz");
 
