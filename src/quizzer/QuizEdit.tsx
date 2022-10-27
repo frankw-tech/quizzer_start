@@ -7,7 +7,7 @@ import { QuestionEdit } from "./QuestionEdit";
 import "./QuizEdit.css";
 
 // Property 'quiz' does not exist on type '{}'.
-// quiz: Quiz, editQuiz: Function, deleteQuiz: Function, switchEdit: Function, resetView: Function}
+// line 17: {quiz: Quiz, editQuiz: Function, deleteQuiz: Function, switchEdit: Function, resetView: Function}
 export const QuizEdit = ({
     quiz,
     editQuiz,
@@ -20,7 +20,8 @@ export const QuizEdit = ({
     const editQuestion = (questionId: number, newQuestion: Question) => {
         setNewQuiz({
             ...newQuiz,
-            questionList: newQuiz.questionList.map((question: Question): Question => id: questionId, Question: newQuestion
+// line 24: (question: Question): Question => question.id === questionId ? newQuestion: question)
+            questionList: newQuiz.questionList.map((question: Question): Question => question.id === questionId ? newQuestion: question
             )
         });
     };

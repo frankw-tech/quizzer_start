@@ -6,8 +6,8 @@ import { Form, Button } from "react-bootstrap";
 import "./QuestionEdit.css";
 
 
-// Property 'index' does not exist on type '{}'.
-// line 18: index: number, lastIndex: number, question: Question, editQuestion: Function, removeQuestion: Function, swapQuestion: Function
+// line 12: Property 'index' does not exist on type '{}'.
+// line 18: {index: number, lastIndex: number, question: Question, editQuestion: Function, removeQuestion: Function, swapQuestion: Function}
 export const QuestionEdit = ({
     index,
     lastIndex,

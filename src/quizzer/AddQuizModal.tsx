@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 
+// Property 'show' does not exist on type '{}'.
 export const AddQuizModal = ({
     show,
     handleClose,
