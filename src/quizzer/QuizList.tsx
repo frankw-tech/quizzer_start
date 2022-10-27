@@ -12,7 +12,7 @@ export const QuizList = ({
     editQuiz,
     deleteQuiz,
     showModal
-}: {quizees: Quiz) => {
+}: {quizees: Quiz, editQuiz: Function, deleteQuiz: Function, showModal: Function}) => {
     const [displayId, setDisplayId] = useState<null | number>(null);
 
     const handleQuizView = (id: number) => {
