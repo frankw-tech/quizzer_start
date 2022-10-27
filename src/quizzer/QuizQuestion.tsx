@@ -5,7 +5,7 @@ import { Form, Button } from "react-bootstrap";
 import "./QuizQuestion.css";
 type ChangeEvent = React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>;
 
-// index: number, question: Question, submitted: boolean, handleSubmit: Function, addPoints: Function, editQuestionSub: Function
+// line 16: {index: number, question: Question, submitted: boolean, handleSubmit: Function, addPoints: Function, editQuestionSub: Function}
 export const QuizQuestion = ({
     index,
     question,
@@ -27,7 +27,7 @@ export const QuizQuestion = ({
         }
     };
 
-    // line 58: type="radio"
+// line 58: type="radio"
     return (
         <>
             <hr />

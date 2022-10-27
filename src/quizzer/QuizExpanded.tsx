@@ -6,7 +6,7 @@ import { Quiz } from "../interfaces/quiz";
 import "./QuizExpanded.css";
 import { QuizQuestion } from "./QuizQuestion";
 
-// quiz: Quiz, editQuiz: Function, resetView: Function, switchEdit: Function
+// line 15: {quiz: Quiz, editQuiz: Function, resetView: Function, switchEdit: Function}
 export const QuizExpanded = ({
     quiz,
     editQuiz,
