@@ -6,13 +6,17 @@ import "./QuizList.css";
 import { QuizView } from "./QuizView";
 
 // line 10: Property 'quizzes' does not exist on type '{}'.
-// line 15: 
+// line 15: {quizzes: Quiz[], editQuiz: (questionId: number, newQuiz: Quiz) => void, deleteQuiz: (questionId: number) => void, showModal: () => void}
 export const QuizList = ({
     quizzes,
     editQuiz,
     deleteQuiz,
     showModal
-}: {quizees: Quiz, editQuiz: Function, deleteQuiz: Function, showModal: Function}) => {
+}: {quizzes: Quiz[],
+    editQuiz: (questionId: number, newQuiz: Quiz) => void,
+    deleteQuiz: (questionId: number) => void,
+    showModal: () => void
+}) => {
     const [displayId, setDisplayId] = useState<null | number>(null);
 
     const handleQuizView = (id: number) => {

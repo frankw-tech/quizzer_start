@@ -3,7 +3,6 @@ import { Quiz } from "../interfaces/quiz";
 import { Question, QuestionType } from "../interfaces/question";
 import { QuizList } from "./QuizList";
 import { AddQuizModal } from "./AddQuizModal";
-
 import "./Quizzer.css";
 import sample from "../data/quizzes.json";
 
@@ -30,7 +29,22 @@ export const Quizzer = () => {
         );
     }
 
+// line 40:
+    // const newQuiz: Quiz = {
+    //     title,
+    //     body,
+    //     id: quizzes.length + 1,
+    //     questionList: [],
+    //     published: false
+    // };
     function addQuiz(title: string, body: string) {
+        const newQuiz: Quiz = {
+            title,
+            body,
+            id: quizzes.length + 1,
+            questionList: [],
+            published: false
+        };
         setQuizzes([...quizzes, newQuiz]);
     }
 

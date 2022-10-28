@@ -6,13 +6,14 @@ import { Quiz } from "../interfaces/quiz";
 import "./QuizExpanded.css";
 import { QuizQuestion } from "./QuizQuestion";
 
-// line 15: {quiz: Quiz, editQuiz: Function, resetView: Function, switchEdit: Function}
+// line 16: {quiz: Quiz, editQuiz: Function, resetView: Function, switchEdit: Function}
+// line 16: {quiz: Quiz; editQuiz: (qId: number, newQuiz: Quiz) => void; resetView: () => void; switchEdit: () => void;}
 export const QuizExpanded = ({
     quiz,
     editQuiz,
     resetView,
     switchEdit
-}: {quiz: Quiz, editQuiz: Function, resetView: Function, switchEdit: Function}) => {
+}: {quiz: Quiz, editQuiz: (qId: number, newQuiz: Quiz) => void, resetView: () => void, switchEdit: () => void}) => {
     const filteredQuestions = quiz.questionList.filter(
         (q: Question): boolean =>
             (quiz.published && q.published) || !quiz.published
@@ -29,8 +30,9 @@ export const QuizExpanded = ({
         setSubmitArr(newSubmitArr);
     };
 
+// line 35: change q.p to q.points
     const totalPoints = filteredQuestions.reduce(
-        (prev: number, q: Question): number => prev + q.p,
+        (prev: number, q: Question): number => prev + q.points,
         0
     );
 
@@ -50,14 +52,16 @@ export const QuizExpanded = ({
         sp(0);
     };
 
+// line 59: (question: Question): Question => ({ ...question, submission: "" }
     const editQuestionSub = (questionId: number, sub: string) => {
         editQuiz(quiz.id, {
             ...quiz,
-            questionList: quiz.questionList.map(
+            questionList: quiz.questionList.map((question: Question): Question => ({ ...question, submission: "" })
             )
         });
     };
 
+// line 100: change question="q" to question={q}
     return (
         <>
             <div className="d-flex justify-content-between align-items-center">
@@ -93,7 +97,7 @@ export const QuizExpanded = ({
                 <QuizQuestion
                     key={quiz.id + "|" + q.id}
                     index={index}
-                    question="q"
+                    question={q}
                     submitted={submitArr[index]}
                     handleSubmit={handleQuestionSubmit}
                     addPoints={addPoints}

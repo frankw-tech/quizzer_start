@@ -8,28 +8,35 @@ import "./QuizEdit.css";
 
 // line 12: Property 'quiz' does not exist on type '{}'.
 // line 17: {quiz: Quiz, editQuiz: Function, deleteQuiz: Function, switchEdit: Function, resetView: Function}
+// line 17
 export const QuizEdit = ({
     quiz,
     editQuiz,
     deleteQuiz,
     switchEdit,
     resetView
-}: {quiz: Quiz, editQuiz: Function, deleteQuiz: Function, switchEdit: Function, resetView: Function}) => {
+}: {quiz: Quiz;
+    editQuiz: (qId: number, newQuiz: Quiz) => void,
+    deleteQuiz: (qId: number) => void,
+    switchEdit: () => void,
+    resetView: () => void
+}) => {
     const [newQuiz, setNewQuiz] = useState<Quiz>({ ...quiz });
 
     const editQuestion = (questionId: number, newQuestion: Question) => {
         setNewQuiz({
             ...newQuiz,
-// line 24: (question: Question): Question => question.id === questionId ? newQuestion: question)
+// line 30: (question: Question): Question => question.id === questionId ? newQuestion: question
             questionList: newQuiz.questionList.map((question: Question): Question => question.id === questionId ? newQuestion: question
             )
         });
     };
 
+// line 39: (question: Question): boolean => question.id !== questionId
     const removeQuestion = (questionId: number) => {
         setNewQuiz({
             ...newQuiz,
-            questionList: newQuiz.questionList.filter(
+            questionList: newQuiz.questionList.filter((question: Question): boolean => question.id !== questionId
             )
         });
     };
@@ -38,6 +45,7 @@ export const QuizEdit = ({
         editQuiz(quiz.id, { ...newQuiz });
     };
 
+// line 56: return q;
     const swapQuestion = (idx1: number, idx2: number) => {
         setNewQuiz({
             ...newQuiz,
@@ -45,12 +53,13 @@ export const QuizEdit = ({
                 (q: Question, idx: number): Question => {
                     if (idx === idx1) return newQuiz.questionList[idx2];
                     if (idx === idx2) return newQuiz.questionList[idx1];
-                    return;
+                    return q;
                 }
             )
         });
     };
 
+// line 94: published: e.target.checked
     return (
         <div>
             <div className="edit_header">
@@ -82,7 +91,7 @@ export const QuizEdit = ({
                             ) => {
                                 setNewQuiz({
                                     ...newQuiz,
-                                    published: 
+                                    published: e.target.checked
                                 });
                             }}
                         ></Form.Check>
