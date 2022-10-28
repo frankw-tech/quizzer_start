@@ -6,8 +6,15 @@ import { Form, Button } from "react-bootstrap";
 import "./QuestionEdit.css";
 
 
-// line 12: Property 'index' does not exist on type '{}'.
-// line 18: {index: number, lastIndex: number, question: Question, editQuestion: Function, removeQuestion: Function, swapQuestion: Function}
+// line 19: Property 'index' does not exist on type '{}'.
+// line 19: {index: number, lastIndex: number, question: Question, editQuestion: Function, removeQuestion: Function, swapQuestion: Function}
+// line 19:
+    // {index: number,
+    // lastIndex: number,
+    // question: Question,
+    // editQuestion: (questionId: number, newQuestion: Question) => void,
+    // removeQuestion: (questionId: number) => void,
+    // swapQuestion: (idx1: number, idx2: number) => void}
 export const QuestionEdit = ({
     index,
     lastIndex,
@@ -15,7 +22,14 @@ export const QuestionEdit = ({
     editQuestion,
     removeQuestion,
     swapQuestion
-}: {index: number, lastIndex: number, question: Question, editQuestion: Function, removeQuestion: Function, swapQuestion: Function}) => {
+}: {
+    index: number,
+    lastIndex: number,
+    question: Question,
+    editQuestion: (questionId: number, newQuestion: Question) => void,
+    removeQuestion: (questionId: number) => void,
+    swapQuestion: (idx1: number, idx2: number) => void
+}) => {
     const [a, b] = useState<number>(
         question.options.findIndex((s: string) => question.expected === s)
     );

@@ -15,9 +15,10 @@ export const QuizEdit = ({
     deleteQuiz,
     switchEdit,
     resetView
-}: {quiz: Quiz;
-    editQuiz: (qId: number, newQuiz: Quiz) => void,
-    deleteQuiz: (qId: number) => void,
+}: {
+    quiz: Quiz;
+    editQuiz: (questionId: number, newQuiz: Quiz) => void,
+    deleteQuiz: (questionId: number) => void,
     switchEdit: () => void,
     resetView: () => void
 }) => {

@@ -13,7 +13,14 @@ export const QuizQuestion = ({
     handleSubmit,
     addPoints,
     editQuestionSub
-}: {index: number, question: Question, submitted: boolean, handleSubmit: Function, addPoints: Function, editQuestionSub: Function}) => {
+}: {    
+    index: number,
+    question: Question,
+    submitted: boolean,
+    handleSubmit: (index: number) => void,
+    addPoints: (p: number) => void,
+    editQuestionSub: (questionId: number, sub: string) => void
+}) => {
     const handleClick = (e: ChangeEvent) => {
         if (!submitted) {
             editQuestionSub(question.id, e.target.value);
@@ -27,7 +34,7 @@ export const QuizQuestion = ({
         }
     };
 
-// line 58: type="radio"
+// line 65: type="radio"
     return (
         <>
             <hr />
