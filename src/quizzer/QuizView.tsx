@@ -5,9 +5,8 @@ import { QuizEdit } from "./QuizEdit";
 
 import "./QuizView.css";
 
-// line 11: Property 'quiz' does not exist on type '{}'.
-// line 16: {quiz: Quiz, editQuiz: Function, deleteQuiz: Function, resetView: Function}
-// line 16:   
+// line 15: Property 'quiz' does not exist on type '{}'.
+// line 19:   
     // {quiz: Quiz,
     // editQuiz: (qId: number, newQuiz: Quiz) => void,
     // deleteQuiz: (qId: number) => void,
@@ -29,8 +28,8 @@ export const QuizView = ({
         setEdit(edit);
     };
 
-// line 28: '}' expected.
-// line 29: editQuiz={editQuiz}
+// line 37: '}' expected.
+// line 38: editQuiz={editQuiz}
     return (
         <div className="quiz_card">
             {edit && (
@@ -52,6 +51,6 @@ export const QuizView = ({
             )}
         </div>
     );
-// line 47: '}' expected.    
-// line 47: }
+// line 56: '}' expected.    
+// line 56: }
 ;}

@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import { Button, Modal, Form } from "react-bootstrap";
 
-// line 14: Property 'show' does not exist on type '{}'.
-// line 14: {show: boolean, handleClose: Function, addQuiz: Function}
-// line 14:
+// line 11: Property 'show' does not exist on type '{}'.
+// line 13:
     // {show: boolean, 
     // handleClose: () => void,
     // addQuiz: (title: string, body: string) => void}
@@ -17,7 +16,7 @@ export const AddQuizModal = ({
     addQuiz: (title: string, body: string) => void
 }) => {
     const [title, setTitle] = useState<string>("Example Quiz");
-// line 19: const [body, setBody] = useState<string>("Example Description");
+// line 21: const [body, setBody] = useState<string>("Example Description");
     const [body, setBody] = useState<string>("Example Description");
 
     const saveChanges = () => {

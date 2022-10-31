@@ -7,7 +7,6 @@ import { QuestionEdit } from "./QuestionEdit";
 import "./QuizEdit.css";
 
 // line 12: Property 'quiz' does not exist on type '{}'.
-// line 17: {quiz: Quiz, editQuiz: Function, deleteQuiz: Function, switchEdit: Function, resetView: Function}
 // line 17
 export const QuizEdit = ({
     quiz,

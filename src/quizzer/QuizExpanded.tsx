@@ -6,7 +6,6 @@ import { Quiz } from "../interfaces/quiz";
 import "./QuizExpanded.css";
 import { QuizQuestion } from "./QuizQuestion";
 
-// line 16: {quiz: Quiz, editQuiz: Function, resetView: Function, switchEdit: Function}
 // line 16: {quiz: Quiz; editQuiz: (qId: number, newQuiz: Quiz) => void; resetView: () => void; switchEdit: () => void;}
 export const QuizExpanded = ({
     quiz,
@@ -52,11 +51,12 @@ export const QuizExpanded = ({
         sp(0);
     };
 
-// line 59: (question: Question): Question => ({ ...question, submission: "" }
+// line 59: (q: Question): Question => q.id === questionId ? { ...q, submission: sub } : q
     const editQuestionSub = (questionId: number, sub: string) => {
         editQuiz(quiz.id, {
             ...quiz,
-            questionList: quiz.questionList.map((question: Question): Question => ({ ...question, submission: "" })
+            questionList: quiz.questionList.map(
+                (q: Question): Question => q.id === questionId ? { ...q, submission: sub } : q
             )
         });
     };

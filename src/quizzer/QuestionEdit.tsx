@@ -1,14 +1,14 @@
 import React, { useState } from "react";
-import { Question, QuestionType } from "../interfaces/question";
-// define Form and Button
+// line 3: commnet out QuestionType
+import { Question } from "../interfaces/question";
+// line 5: define Form and Button
 import { Form, Button } from "react-bootstrap";
 
 import "./QuestionEdit.css";
 
 
-// line 19: Property 'index' does not exist on type '{}'.
-// line 19: {index: number, lastIndex: number, question: Question, editQuestion: Function, removeQuestion: Function, swapQuestion: Function}
-// line 19:
+// line 20: Property 'index' does not exist on type '{}'.
+// line 25:
     // {index: number,
     // lastIndex: number,
     // question: Question,
@@ -28,7 +28,7 @@ export const QuestionEdit = ({
     question: Question,
     editQuestion: (questionId: number, newQuestion: Question) => void,
     removeQuestion: (questionId: number) => void,
-    swapQuestion: (idx1: number, idx2: number) => void
+    swapQuestion: (index1: number, index2: number) => void
 }) => {
     const [a, b] = useState<number>(
         question.options.findIndex((s: string) => question.expected === s)
@@ -83,7 +83,7 @@ export const QuestionEdit = ({
         });
     };
 
-// line 120: change handleSwitch to switchMulti
+// line 134: change handleSwitch to switchMulti
     return (
         <>
             <hr />
