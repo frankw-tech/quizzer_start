@@ -5,7 +5,7 @@ import { QuizCard } from "./QuizCard";
 import "./QuizList.css";
 import { QuizView } from "./QuizView";
 
-// line 11: Property 'quizzes' does not exist on type '{}'.
+// line 10: Property 'quizzes' does not exist on type '{}'.
 export const QuizList = ({
     quizzes,
     editQuiz,
