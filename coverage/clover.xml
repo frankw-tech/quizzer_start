@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1667212726982" clover="3.2.0">
-  <project timestamp="1667212726982" name="All files">
+<coverage generated="1667213542480" clover="3.2.0">
+  <project timestamp="1667213542480" name="All files">
     <metrics statements="141" coveredstatements="80" conditionals="58" coveredconditionals="32" methods="73" coveredmethods="36" elements="272" coveredelements="148" complexity="0" loc="141" ncloc="141" packages="3" files="12" classes="12"/>
     <package name="src">
       <metrics statements="3" coveredstatements="2" conditionals="4" coveredconditionals="2" methods="2" coveredmethods="1"/>
@@ -51,26 +51,26 @@
         <line num="49" count="0" type="stmt"/>
         <line num="50" count="0" type="stmt"/>
         <line num="51" count="0" type="stmt"/>
-        <line num="59" count="0" type="stmt"/>
         <line num="60" count="0" type="stmt"/>
         <line num="61" count="0" type="stmt"/>
-        <line num="64" count="0" type="stmt"/>
-        <line num="68" count="0" type="stmt"/>
+        <line num="62" count="0" type="stmt"/>
+        <line num="65" count="0" type="stmt"/>
         <line num="69" count="0" type="stmt"/>
         <line num="70" count="0" type="stmt"/>
-        <line num="77" count="0" type="stmt"/>
+        <line num="71" count="0" type="stmt"/>
         <line num="78" count="0" type="stmt"/>
         <line num="79" count="0" type="stmt"/>
         <line num="80" count="0" type="stmt"/>
-        <line num="87" count="0" type="stmt"/>
-        <line num="104" count="0" type="stmt"/>
-        <line num="177" count="0" type="stmt"/>
-        <line num="190" count="0" type="stmt"/>
-        <line num="211" count="0" type="stmt"/>
-        <line num="229" count="0" type="stmt"/>
-        <line num="238" count="0" type="stmt"/>
-        <line num="254" count="0" type="stmt"/>
-        <line num="263" count="0" type="stmt"/>
+        <line num="81" count="0" type="stmt"/>
+        <line num="88" count="0" type="stmt"/>
+        <line num="105" count="0" type="stmt"/>
+        <line num="178" count="0" type="stmt"/>
+        <line num="191" count="0" type="stmt"/>
+        <line num="212" count="0" type="stmt"/>
+        <line num="230" count="0" type="stmt"/>
+        <line num="239" count="0" type="stmt"/>
+        <line num="255" count="0" type="stmt"/>
+        <line num="264" count="0" type="stmt"/>
       </file>
       <file name="QuizCard.tsx" path="C:\Users\wangj\Desktop\CISC275\quizzer_start\src\quizzer\QuizCard.tsx">
         <metrics statements="5" coveredstatements="5" conditionals="5" coveredconditionals="4" methods="3" coveredmethods="3"/>

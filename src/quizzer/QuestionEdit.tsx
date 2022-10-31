@@ -7,7 +7,7 @@ import { Form, Button } from "react-bootstrap";
 import "./QuestionEdit.css";
 
 
-// line 20: Property 'index' does not exist on type '{}'.
+// line 19: Property 'index' does not exist on type '{}'.
 // line 25:
     // {index: number,
     // lastIndex: number,
@@ -56,8 +56,9 @@ export const QuestionEdit = ({
         });
     };
 
+// line 61: ;
     const handlePoints = (e: React.ChangeEvent<HTMLInputElement>) => {
-    	question.points = parseInt(e.target.value)
+    	question.points = parseInt(e.target.value);
         editQuestion(question.id, question);
     };
 
@@ -85,7 +86,7 @@ export const QuestionEdit = ({
 
 // line 134: change handleSwitch to switchMulti
     return (
-        <>
+    <>
             <hr />
             <div className="edit_question">
                 <div className="edit_title_row">
@@ -270,3 +271,4 @@ export const QuestionEdit = ({
         </>
     );
 };
+
