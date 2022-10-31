@@ -12,7 +12,12 @@ export const QuizExpanded = ({
     editQuiz,
     resetView,
     switchEdit
-}: {quiz: Quiz, editQuiz: (qId: number, newQuiz: Quiz) => void, resetView: () => void, switchEdit: () => void}) => {
+}: {
+    quiz: Quiz, 
+    editQuiz: (qId: number, newQuiz: Quiz) => void, 
+    resetView: () => void, 
+    switchEdit: () => void
+}) => {
     const filteredQuestions = quiz.questionList.filter(
         (q: Question): boolean =>
             (quiz.published && q.published) || !quiz.published
@@ -29,7 +34,7 @@ export const QuizExpanded = ({
         setSubmitArr(newSubmitArr);
     };
 
-// line 35: change q.p to q.points
+// line 39: change q.p to q.points
     const totalPoints = filteredQuestions.reduce(
         (prev: number, q: Question): number => prev + q.points,
         0
@@ -51,7 +56,7 @@ export const QuizExpanded = ({
         sp(0);
     };
 
-// line 59: (q: Question): Question => q.id === questionId ? { ...q, submission: sub } : q
+// line 64: (q: Question): Question => q.id === questionId ? { ...q, submission: sub } : q
     const editQuestionSub = (questionId: number, sub: string) => {
         editQuiz(quiz.id, {
             ...quiz,
@@ -61,7 +66,7 @@ export const QuizExpanded = ({
         });
     };
 
-// line 100: change question="q" to question={q}
+// line 105: change question="q" to question={q}
     return (
         <>
             <div className="d-flex justify-content-between align-items-center">
