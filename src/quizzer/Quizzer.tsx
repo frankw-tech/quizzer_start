@@ -3,6 +3,7 @@ import { Quiz } from "../interfaces/quiz";
 import { Question, QuestionType } from "../interfaces/question";
 import { QuizList } from "./QuizList";
 import { AddQuizModal } from "./AddQuizModal";
+
 import "./Quizzer.css";
 import sample from "../data/quizzes.json";
 
@@ -29,7 +30,7 @@ export const Quizzer = () => {
         );
     }
 
-// line 41:
+// line 42:
     // const newQuiz: Quiz = {
     //     title,
     //     body,
