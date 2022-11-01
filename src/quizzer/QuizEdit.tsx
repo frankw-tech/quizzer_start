@@ -6,8 +6,8 @@ import { QuestionEdit } from "./QuestionEdit";
 
 import "./QuizEdit.css";
 
-// line 12: Property 'quiz' does not exist on type '{}'.
-// line 17
+// line 13: Property 'quiz' does not exist on type '{}'.
+// line 18
 export const QuizEdit = ({
     quiz,
     editQuiz,
@@ -15,7 +15,7 @@ export const QuizEdit = ({
     switchEdit,
     resetView
 }: {
-    quiz: Quiz;
+    quiz: Quiz,
     editQuiz: (questionId: number, newQuiz: Quiz) => void,
     deleteQuiz: (questionId: number) => void,
     switchEdit: () => void,
@@ -27,16 +27,18 @@ export const QuizEdit = ({
         setNewQuiz({
             ...newQuiz,
 // line 30: (question: Question): Question => question.id === questionId ? newQuestion: question
-            questionList: newQuiz.questionList.map((question: Question): Question => question.id === questionId ? newQuestion: question
+            questionList: newQuiz.questionList.map(
+                (question: Question): Question => question.id === questionId ? newQuestion: question
             )
         });
     };
 
-// line 39: (question: Question): boolean => question.id !== questionId
+// line 40: (question: Question): boolean => question.id !== questionId
     const removeQuestion = (questionId: number) => {
         setNewQuiz({
             ...newQuiz,
-            questionList: newQuiz.questionList.filter((question: Question): boolean => question.id !== questionId
+            questionList: newQuiz.questionList.filter(
+                (question: Question): boolean => question.id !== questionId
             )
         });
     };
@@ -45,7 +47,7 @@ export const QuizEdit = ({
         editQuiz(quiz.id, { ...newQuiz });
     };
 
-// line 56: return q;
+// line 58: return q;
     const swapQuestion = (idx1: number, idx2: number) => {
         setNewQuiz({
             ...newQuiz,
@@ -59,7 +61,7 @@ export const QuizEdit = ({
         });
     };
 
-// line 94: published: e.target.checked
+// line 96: published: e.target.checked
     return (
         <div>
             <div className="edit_header">

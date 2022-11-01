@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-// line 3: commnet out QuestionType
+// line 3: comment out QuestionType
 import { Question } from "../interfaces/question";
 // line 5: define Form and Button
 import { Form, Button } from "react-bootstrap";
@@ -14,7 +14,7 @@ import "./QuestionEdit.css";
     // question: Question,
     // editQuestion: (questionId: number, newQuestion: Question) => void,
     // removeQuestion: (questionId: number) => void,
-    // swapQuestion: (idx1: number, idx2: number) => void}
+    // swapQuestion: (index1: number, index2: number) => void}
 export const QuestionEdit = ({
     index,
     lastIndex,
@@ -84,7 +84,7 @@ export const QuestionEdit = ({
         });
     };
 
-// line 134: change handleSwitch to switchMulti
+// line 135: change handleSwitch to switchMulti
     return (
     <>
             <hr />

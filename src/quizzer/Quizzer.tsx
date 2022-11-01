@@ -29,7 +29,7 @@ export const Quizzer = () => {
         );
     }
 
-// line 40:
+// line 41:
     // const newQuiz: Quiz = {
     //     title,
     //     body,

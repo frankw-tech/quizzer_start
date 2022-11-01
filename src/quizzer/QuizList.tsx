@@ -27,6 +27,7 @@ export const QuizList = ({
         setDisplayId(null);
     };
 
+// line 59: return null;
     return (
         <div className="quiz_list">
             {!displayId && (

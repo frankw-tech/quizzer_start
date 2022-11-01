@@ -24,12 +24,13 @@ export const QuizView = ({
 }) => {
     const [edit, setEdit] = useState(false);
 
+// line 29: change setEdit(edit); to setEdit(!edit);
     const switchEdit = () => {
-        setEdit(edit);
+        setEdit(!edit);
     };
 
-// line 37: '}' expected.
-// line 38: editQuiz={editQuiz}
+// line 38: '}' expected.
+// line 38: quiz={quiz}
     return (
         <div className="quiz_card">
             {edit && (
@@ -51,6 +52,6 @@ export const QuizView = ({
             )}
         </div>
     );
-// line 56: '}' expected.    
-// line 56: }
+// line 57: '}' expected.    
+// line 57: }
 ;}

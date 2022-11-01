@@ -5,7 +5,7 @@ import { Form, Button } from "react-bootstrap";
 import "./QuizQuestion.css";
 type ChangeEvent = React.ChangeEvent<HTMLTextAreaElement | HTMLInputElement>;
 
-// line 16:
+// line 17
 export const QuizQuestion = ({
     index,
     question,
@@ -34,7 +34,7 @@ export const QuizQuestion = ({
         }
     };
 
-// line 65: type="checkbox"
+// line 66: type="checkbox"
     return (
         <>
             <hr />
@@ -62,7 +62,7 @@ export const QuizQuestion = ({
                             {question.options.map(
                                 (option: string, i: number) => (
                                     <Form.Check
-                                        type="radio"
+                                        type="checkbox"
                                         name={"questionChoice" + index}
                                         key={option + " | " + i}
                                         label={option}

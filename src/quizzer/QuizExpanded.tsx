@@ -6,7 +6,11 @@ import { Quiz } from "../interfaces/quiz";
 import "./QuizExpanded.css";
 import { QuizQuestion } from "./QuizQuestion";
 
-// line 16: {quiz: Quiz; editQuiz: (qId: number, newQuiz: Quiz) => void; resetView: () => void; switchEdit: () => void;}
+// line 19:
+    // {quiz: Quiz, 
+    // editQuiz: (questionId: number, newQuiz: Quiz) => void, 
+    // resetView: () => void, 
+    // switchEdit: () => void}
 export const QuizExpanded = ({
     quiz,
     editQuiz,
@@ -14,7 +18,7 @@ export const QuizExpanded = ({
     switchEdit
 }: {
     quiz: Quiz, 
-    editQuiz: (qId: number, newQuiz: Quiz) => void, 
+    editQuiz: (questionId: number, newQuiz: Quiz) => void, 
     resetView: () => void, 
     switchEdit: () => void
 }) => {
@@ -34,7 +38,7 @@ export const QuizExpanded = ({
         setSubmitArr(newSubmitArr);
     };
 
-// line 39: change q.p to q.points
+// line 43: change q.p to q.points
     const totalPoints = filteredQuestions.reduce(
         (prev: number, q: Question): number => prev + q.points,
         0
@@ -56,7 +60,7 @@ export const QuizExpanded = ({
         sp(0);
     };
 
-// line 64: (q: Question): Question => q.id === questionId ? { ...q, submission: sub } : q
+// line 68: (q: Question): Question => q.id === questionId ? { ...q, submission: sub } : q
     const editQuestionSub = (questionId: number, sub: string) => {
         editQuiz(quiz.id, {
             ...quiz,
@@ -66,7 +70,7 @@ export const QuizExpanded = ({
         });
     };
 
-// line 105: change question="q" to question={q}
+// line 109: change question="q" to question={q}
     return (
         <>
             <div className="d-flex justify-content-between align-items-center">
